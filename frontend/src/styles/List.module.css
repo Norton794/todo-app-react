@@ -1,0 +1,32 @@
+.list {
+  margin: 0 auto;
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: #25273d;
+  border-bottom: 1px solid #393a4b;
+  border-left: 1px solid #393a4b;
+  border-right: 1px solid #393a4b;
+  padding: 1.5rem 1.3rem;
+  position: relative;
+  
+  color: hsl(234, 39%, 85%);
+  font-size: 1.2rem;
+}
+
+.list .circle {
+  width: 24px;
+  height: 24px;
+  border: 1px solid #393a4b;
+  border-radius: 50%;
+  z-index: 1000;
+  position: absolute;
+  left: 4%;
+  top: 28%;
+}
+
+
+.list span{
+    padding-left: 2.5rem;
+}

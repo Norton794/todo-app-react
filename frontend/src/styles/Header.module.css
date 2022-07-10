@@ -1,0 +1,21 @@
+.container {
+  width: 100vw;
+  height: 40vh;
+  margin: 0 auto;
+  color: hsl(0, 0%, 98%);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-image: url("/bg-desktop-dark.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 110%;
+  padding: .2rem 2rem 6rem 2rem;
+}
+
+.container h1 {
+  letter-spacing: 0.8rem;
+}
+
+.container span {
+  cursor: pointer;
+}
