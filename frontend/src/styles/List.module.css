@@ -1,6 +1,6 @@
 .list {
   margin: 0 auto;
-  width: 40%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -24,9 +24,33 @@
   position: absolute;
   left: 4%;
   top: 28%;
+  cursor: pointer;
+}
+
+.list .circleCheck {
+  background: linear-gradient( to right, #57ddff, #c058f3);
+  width: 24px;
+  height: 24px;
+  border: 1px solid #393a4b;
+  border-radius: 50%;
+  z-index: 1000;
+  position: absolute;
+  left: 4%;
+  top: 28%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
 
 .list span{
     padding-left: 2.5rem;
+}
+
+.list span.icon{
+  position: absolute;
+  right: 2.5rem;
+  cursor: pointer;
 }

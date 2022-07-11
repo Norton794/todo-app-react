@@ -1,37 +1,39 @@
-.form{
-    position: fixed;
-    width: 40%;
-    top: 20%;
-    right: 30%;
-    display: flex;
-    justify-content: center;
-    
-    
+.form {
+  position: absolute;
+  width: 40%;
+  top: 20%;
+  right: 30%;
+  display: flex;
+  justify-content: center;
 }
 
-.form input{
-    width: 100%;
-    height: 100%;
-    padding: 1.4rem 4rem;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    margin-top: .4rem;
-    margin-bottom: 2rem;
-    background-color: hsl(235, 24%, 19%);
-    border: none;
-    color: hsl(234, 39%, 85%);
-    font-size: 1.15rem;
-    font-family: "Josefin Sans", sans-serif;
+.form input {
+  width: 100%;
+  height: 100%;
+  padding: 1.4rem 4rem;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  margin-top: 0.4rem;
+  margin-bottom: 2rem;
+  border: 1px solid hsl(235, 24%, 19%);
+  background-color: hsl(235, 24%, 19%);
+  color: hsl(234, 39%, 85%);
+  font-size: 1.15rem;
+  font-family: "Josefin Sans", sans-serif;
 }
 
-.form div{
-    width: 24px;
-    height: 24px;
-    border: 1px solid #393A4B;
-    border-radius: 50%;
-    z-index: 1000;
-    position: absolute;
-    left: 4%;
-    top: 23%;
+.form input:focus-visible, .form input:active, .form input:focus {
+  border: 1px solid hsl(235, 24%, 19%);
+}
+
+.form div {
+  width: 24px;
+  height: 24px;
+  border: 1px solid #393a4b;
+  border-radius: 50%;
+  z-index: 1000;
+  position: absolute;
+  left: 4%;
+  top: 23%;
 }
