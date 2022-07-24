@@ -66,7 +66,7 @@ const Home: NextPage = () => {
     axios
       .get(`${URL}?sort=-createdAt${showed}`)
       .then((resp: any) => setList(resp.data))
-      .then((resp) => console.log(list));
+      .catch(error=> console.error(error));
 
     activesLeft();
     getCompleted();
