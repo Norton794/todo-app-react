@@ -16,7 +16,7 @@
   font-size: 1rem;
 }
 
-.bottom .category {
+.bottom .category, .bottomLight .category {
   display: flex;
   justify-content: space-between;
   gap: 15px;
@@ -26,6 +26,30 @@
   color: hsl(236, 33%, 92%);
 }
 
-.bottom .active{
+.bottom .active, .bottomLight .active{
     color: hsl(220, 98%, 61%);
+}
+
+
+.bottomLight{
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  border-bottom: 1px solid #393a4b;
+  border-left: 1px solid #393a4b;
+  border-right: 1px solid #393a4b;
+  padding: 1.5rem 1.3rem;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  box-shadow: 0 4px 4px rgb(0 0 0 / 25%);
+  color: hsl(236, 9%, 61%);
+  font-size: 1rem;
+}
+
+
+.bottomLight a:hover:not(.active){
+  color: #25273d;
 }

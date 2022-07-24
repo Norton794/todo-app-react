@@ -5,8 +5,10 @@ import Form from "../components/Form";
 import Header from "../components/Header";
 import List from "../components/List";
 import Wrapper from "../components/Wrapper";
-import { useEffect, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import { URL } from "../utils";
+
+export const ThemeContext = createContext("");
 
 const Home: NextPage = () => {
   const [description, setDescription] = useState("");
@@ -17,6 +19,15 @@ const Home: NextPage = () => {
   const [active1, setActive1] = useState("active");
   const [active2, setActive2] = useState("");
   const [active3, setActive3] = useState("");
+  const [theme, setTheme] = useState("Dark");
+
+  function toogleTheme() {
+    if (theme === "Light") {
+      setTheme("Dark");
+    } else {
+      setTheme("Light");
+    }
+  }
 
   function handleAll() {
     setShowed("");
@@ -81,12 +92,18 @@ const Home: NextPage = () => {
   }
 
   function clearCompleted() {
-    completed?.map((c: any) => {
-      axios
-        .delete(`${URL}/${c._id}`)
-        .then((resp) => refresh())
-        .catch((err) => console.error(err));
-    });
+    if (
+      confirm(
+        `${completed.length} item(s) will be deleted.\nDo you want to do it?`
+      )
+    ) {
+      completed?.map((c: any) => {
+        axios
+          .delete(`${URL}/${c._id}`)
+          .then((resp) => refresh())
+          .catch((err) => console.error(err));
+      });
+    }
   }
 
   useEffect(() => {
@@ -94,8 +111,8 @@ const Home: NextPage = () => {
   }, [showed, completed]);
 
   return (
-    <div>
-      <Header />
+    <ThemeContext.Provider value={theme}>
+      <Header toogleTheme={toogleTheme} />
       <Form
         description={description}
         setDescription={setDescription}
@@ -127,7 +144,7 @@ const Home: NextPage = () => {
           setActive3={setActive3}
         />
       </Wrapper>
-    </div>
+    </ThemeContext.Provider>
   );
 };
 

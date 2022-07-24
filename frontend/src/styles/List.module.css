@@ -10,12 +10,11 @@
   border-right: 1px solid #393a4b;
   padding: 1.5rem 1.3rem;
   position: relative;
-  
   color: hsl(234, 39%, 85%);
   font-size: 1.2rem;
 }
 
-.list .circle {
+.list .circle, .listLight .circle {
   width: 24px;
   height: 24px;
   border: 1px solid #393a4b;
@@ -27,7 +26,7 @@
   cursor: pointer;
 }
 
-.list .circleCheck {
+.list .circleCheck, .listLight .circleCheck {
   background: linear-gradient( to right, #57ddff, #c058f3);
   width: 24px;
   height: 24px;
@@ -45,11 +44,11 @@
 }
 
 
-.list span{
+.list span, .listLight span{
     padding-left: 2.5rem;
 }
 
-.list span.icon{
+.list span.icon, .listLight span.icon{
   position: absolute;
   right: 2.5rem;
   cursor: pointer;
@@ -60,3 +59,20 @@
 /* .list span.icon:hover{
   display: block;
 } */
+
+
+.listLight {
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: #fff;
+  border-bottom: 1px solid #393a4b;
+  border-left: 1px solid #393a4b;
+  border-right: 1px solid #393a4b;
+  padding: 1.5rem 1.3rem;
+  position: relative;
+  color: #25273d;
+  font-size: 1.2rem;
+}

@@ -1,4 +1,4 @@
-.form {
+.form, .formLight {
   position: absolute;
   width: 40%;
   top: 20%;
@@ -24,13 +24,47 @@
 }
 
 .form input:focus-visible, .form input:active, .form input:focus {
-  border: 1px solid hsl(235, 24%, 19%);
+  outline: none;
 }
 
 .form div {
   width: 24px;
   height: 24px;
   border: 1px solid #393a4b;
+  border-radius: 50%;
+  z-index: 1000;
+  position: absolute;
+  left: 4%;
+  top: 23%;
+}
+
+
+
+.formLight input {
+  width: 100%;
+  height: 100%;
+  padding: 1.4rem 4rem;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  margin-top: 0.4rem;
+  margin-bottom: 2rem;
+  border: 1px solid #fff;
+  background-color: #fff;
+  color: hsl(235, 24%, 19%);
+  font-size: 1.15rem;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+
+.formLight input:focus-visible, .formLight input:active, .formLight input:focus {
+  border: 1px solid #fff;
+}
+
+.form div {
+  width: 24px;
+  height: 24px;
+  border: 4px solid hsl(235, 24%, 19%);
   border-radius: 50%;
   z-index: 1000;
   position: absolute;

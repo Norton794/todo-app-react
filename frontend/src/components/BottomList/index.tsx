@@ -1,8 +1,11 @@
+import { useContext } from "react";
+import { ThemeContext } from "../../pages";
 import styles from "../../styles/BottomList.module.css";
 
 export default function BottomList(props: any) {
+  const Theme = useContext(ThemeContext);
   return (
-    <div className={styles.bottom}>
+    <div className={Theme === 'Dark' ? styles.bottom : styles.bottomLight}>
       <div>{props.pending} item(s) left</div>
       <div className={styles.category}>
         <a
