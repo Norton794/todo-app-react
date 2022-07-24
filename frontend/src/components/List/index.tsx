@@ -19,7 +19,7 @@ export default function List(props: any) {
         ></div>
       )}
 
-      <span>{done ? <del>{props.text}</del> : props.text}</span>
+      <span>{done ? <del style={{color: '#979797'}}>{props.text}</del> : props.text}</span>
 
       <span className={styles.icon} onClick={() => props.handleRemove(id)}>
         {XIcon}
