@@ -1,4 +1,5 @@
-.form, .formLight {
+.form,
+.formLight {
   position: absolute;
   width: 40%;
   top: 20%;
@@ -23,7 +24,9 @@
   font-family: "Josefin Sans", sans-serif;
 }
 
-.form input:focus-visible, .form input:active, .form input:focus {
+.form input:focus-visible,
+.form input:active,
+.form input:focus {
   outline: none;
 }
 
@@ -37,8 +40,6 @@
   left: 4%;
   top: 23%;
 }
-
-
 
 .formLight input {
   width: 100%;
@@ -56,8 +57,9 @@
   font-family: "Josefin Sans", sans-serif;
 }
 
-
-.formLight input:focus-visible, .formLight input:active, .formLight input:focus {
+.formLight input:focus-visible,
+.formLight input:active,
+.formLight input:focus {
   border: 1px solid #fff;
 }
 
@@ -70,4 +72,16 @@
   position: absolute;
   left: 4%;
   top: 23%;
+}
+
+@media (max-width: 1200px) {
+  .form,
+  .formLight {
+    position: absolute;
+    width: 80%;
+    top: 20%;
+    right: 10%;
+    display: flex;
+    justify-content: center;
+  }
 }

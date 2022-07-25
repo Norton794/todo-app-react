@@ -1,7 +1,15 @@
-.wrapper{
+.wrapper {
+  position: absolute;
+  top: 35%;
+  left: 30%;
+  width: 40%;
+}
+
+@media (max-width: 1200px) {
+  .wrapper {
     position: absolute;
     top: 35%;
-    left: 30%;
-    width: 40%;
-    
+    left: 10%;
+    width: 80%;
+  }
 }
